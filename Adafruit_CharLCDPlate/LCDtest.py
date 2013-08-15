@@ -24,7 +24,7 @@ btn = ((lcd.LEFT  , 'Red Red Wine'              , lcd.RED),
        (lcd.UP    , 'Sita sings\nthe blues'     , lcd.BLUE),
        (lcd.DOWN  , 'I see fields\nof green'    , lcd.GREEN),
        (lcd.RIGHT , 'Purple mountain\nmajesties', lcd.VIOLET),
-       (lcd.SELECT, ''                          , lcd.ON))
+       (lcd.SELECT, 'What is a select\nbutton?', lcd.ON))
 prev = -1
 while True:
     for b in btn:
@@ -32,6 +32,7 @@ while True:
             if b is not prev:
                 lcd.clear()
                 lcd.message(b[1])
+                #lcd.leftToRight()
                 lcd.backlight(b[2])
                 prev = b
             break

@@ -84,4 +84,3 @@ class LEDBackpack:
       self.writeDisplay()
 
 led = LEDBackpack(0x70)
-

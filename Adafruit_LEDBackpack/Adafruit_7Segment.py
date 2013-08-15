@@ -50,3 +50,11 @@ class SevenSegment:
     else:
       self.disp.setBufferRow(2, 0)
 
+  def clear(self , position = 99 , update=True):
+    'Clears display'
+    if position == 99: self.disp.clear(update)
+    else: self.disp.setBufferRow(position , 0)
+
+  def getBuffer(self):
+    'Returns copy of display buffer'
+    return self.disp.getBuffer()
