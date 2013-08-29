@@ -58,3 +58,16 @@ class SevenSegment:
   def getBuffer(self):
     'Returns copy of display buffer'
     return self.disp.getBuffer()
+  
+  def setNumber(value):
+    if value < 0: self.setColon(True)
+    else: self.setColon(False)
+    self.writeDigit(0 , (abs(value) / 1000)%10)
+    self.writeDigit(1 , (abs(value) / 100)%10)
+    self.writeDigit(3 , (abs(value) / 10)%10)
+    self.writeDigit(4 , abs(value) % 10)
+
+  def setLetter(value):
+    if not 9 < value < 16: return
+    self.clear()
+    self.writeDigit(4 , value)
